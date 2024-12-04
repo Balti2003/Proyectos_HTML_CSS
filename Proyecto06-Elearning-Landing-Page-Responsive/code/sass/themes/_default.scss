@@ -1,0 +1,13 @@
+html * {
+    font-family: $primary-font;
+}
+ 
+body {
+    overflow-x: hidden;
+    font-size: 16px;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}

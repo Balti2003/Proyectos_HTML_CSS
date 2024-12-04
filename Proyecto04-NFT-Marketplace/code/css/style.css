@@ -1,0 +1,512 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/*Empieza el proyecto*/
+:root {
+    --bg-gris: #2e2f38;
+    --color-red: #fa504d;
+    --color-grey: #8e8e8e;
+    --font-title: "Belgrano", serif;
+    --font-normal: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-normal);
+    font-size: 16px;
+    height: 100vh;
+}
+
+body::before {
+  content: "";
+  width: 42%;
+  background-color: var(--bg-gris);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+header.header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+header.header a {
+    text-decoration: none;
+}
+
+.principal-nav {
+    margin-left: 130px;
+}
+
+.principal-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 46px;
+}
+
+.principal-nav ul li a {
+    color: var(--bg-gris);
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.login {
+    margin-left: auto;
+}
+
+.login ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+.login ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.login ul li a.btn {
+    background-color: var(--color-red);
+    padding: 8px 32px;
+    display: inline-block;
+}
+
+.login ul li a.btn:hover {
+    background-color: #6a0604;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.hero {
+    grid-column: 1 / span 1;
+    margin-bottom: 20px;
+    padding-top: 50px;
+}
+
+.featured {
+    grid-column: 1 / span 1;
+}
+
+.nft {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.hero h1 {
+    font-family: var(--font-title);
+    font-size: 55px;
+    font-weight: 400;
+    line-height: 65px;
+    padding-right: 40px;
+    margin-bottom: 30px;
+}
+
+.hero__subtitle {
+    color: var(--color-grey);
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+div.hero__buttons a.btn {
+    background-color: var(--color-red);
+    padding: 10px 65px;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    margin-right: 32px;
+}
+
+div.hero__buttons a.btn:hover {
+    background-color: #6a0604;
+}
+
+div.hero__buttons a {
+    color: var(--bg-gris);
+    font-weight: 300;
+}
+
+.featured__title {
+    font-family: var(--font-title);
+    margin: 0;
+    margin-bottom: 20px;
+    margin-top: 14px;
+}
+
+.featured__imgs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.featured__imgs img {
+    width: 48%;
+    border: 1px solid var(--color-grey);
+    padding: 4px;
+}
+
+.nft div.nft__imagecontainer img{
+    max-width: 100%;
+}
+
+.nft__data {
+    background-color: white;
+    padding: 16px;
+    margin-top: -30px;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.nft__data div.nft__header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--bg-gris);
+}
+
+.nft__data div.nft__owner {
+    display: flex;
+}
+
+.nft__data div.nft__owner-data {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+}
+
+.nft__data div.nft__owner-data p.nft__username {
+    color: var(--color-grey);
+    font-weight: 300;
+}
+
+.nft__data div.nft__owner-data p.nft__name {
+    font-weight: bold;
+}
+
+.nft__data div.nft__price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nft__data p.nft__price-current {
+    color: var(--color-grey);
+}
+
+.nft__data p.nft__price-number {
+    font-weight: bold;
+}
+
+div.nft__buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+div.nft__buttons a.btn {
+    padding: 10px 50px;
+    background-color: var(--color-red);
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+}
+
+div.nft__buttons a.btn:hover {
+    background-color: #6a0604;
+}
+
+div.nft__buttons a.btn:last-child {
+    background-color: transparent;
+    color: var(--color-red);
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 50px;
+}
+
+div.nft__buttons a.btn:last-child:hover {
+    background-color: #6a0604;
+    color: white;
+}
+
+.nft__numbers {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+}
+
+span.nft__number {
+    color: var(--color-red);
+    font-size: 20px;
+    font-weight: 500;
+}
+

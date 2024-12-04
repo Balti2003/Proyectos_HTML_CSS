@@ -1,0 +1,46 @@
+.our-service {
+    width: 326px;
+    position: absolute;
+    top: 96%; 
+    right: 96px; 
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.our-service__title {
+    font-size: 10px;
+    font-weight: 400;
+    margin-bottom: 15px; 
+    color: $color-black;
+    gap: 10px;
+}
+
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0; 
+}
+
+.service-list li {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: $color-black;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+  
+  .service-list li span {
+    font-weight: 400;
+    font-size: 10px;
+    color: $color-grey;
+    margin-right: 10px;
+}
+  
+  .service-list li img {
+    margin-left: auto;
+    width: 26px;
+    height: auto;
+}

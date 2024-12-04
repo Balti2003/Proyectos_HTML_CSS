@@ -1,0 +1,8 @@
+.btn {
+    @include button();
+}
+
+.btn2 {
+    @include button2();
+    
+}
