@@ -5,7 +5,7 @@ Este repositorio contiene varios proyectos de paginas web creadas con HTML y CSS
 ## Proyectos Realizados.
 
 ### Proyecto 1
-![Descripción de la imagen](ruta/a/imagen1.png)
+![Header Business Agency](https://github.com/Balti2003/Proyectos_HTML_CSS/blob/main/proyecto1.png?raw=true)
 
 ### Proyecto 2
 ![Descripción de la imagen](ruta/a/imagen2.png)
